@@ -1,0 +1,35 @@
+body {
+    background-color: #87CEEB;
+}
+h1 {
+    color:darkblue;
+    text-align:center;
+    font-size:40px;
+}
+h2, p {
+    color: black;
+}
+table {
+    width: 60%;
+    margin: 20px auto;
+    /* margin: 0 auto → coloque espaço automático dos dois lados.*/
+    /* margin-left: 200px; */
+    /*margin-top: 20px */
+    /*margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;*/
+    background-color: white;
+    border-collapse: collapse;
+}
+th {
+    background-color: darkblue;
+    color: white;
+}
+td {
+    text-align: center;
+    padding: 10px
+}
+table, th,td {
+    border: 1px solid black;
+}
