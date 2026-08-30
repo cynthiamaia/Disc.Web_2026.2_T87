@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cadastro</title>
+    <link rel="stylesheet" href="style_forms.css">
+</head>
+<body>
+<div class="container">
+    <h1>Cadastro</h1>
+    <form action="#" method="post">
+    <!-- <div> Primeiro Isso-->
+            <label for="nomeusuario">Nome:</label><br>
+            <input type="text" id="nomeusuario" name="nome" required><br><br>
+    <!-- </div> -->
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha" required><br><br>
+        <label>Curso</label><br>
+        
+        <select name="curso">
+            <option value="ads">ADS</option>
+            <option value="cc">CC</option>
+            <option value="si">SI</option>
+        </select><br><br>
+        
+        <input id="botoes" type="submit" value="Cadastrar">
+        <!--define um botao para enviar os dados do formulario-->
+    </form>
+</div>
+</body>
+</html>

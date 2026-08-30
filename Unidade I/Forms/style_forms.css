@@ -1,0 +1,42 @@
+body{
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+label {
+    display: block; 
+    margin-bottom: 2px;
+    font-weight: bold;
+    /*<label> é display: inline, 
+    e elementos inline geralmente ignoram margin-top/margin-bottom*/
+}
+h1 {
+    text-align: center;
+    color: black;
+    position: relative;
+    /*você pode movê-lo um pouco usando top, left, right ou bottom.*/
+    top: -50px;
+}
+input{
+    border: 1px solid #ccc; /*Define a borda do campo.*/
+    border-radius: 4px; /*Deixa os cantos arredondados.*/
+    width: 100%; 
+    /*    O campo deve ocupar 100% da largura disponível do elemento pai.
+    o pai direto dele é formO input tenta ocupar 100% da largura disponível do elemento pai, que nesse caso é o <form>.*/
+    padding: 8px;
+    /*padding cria um espaço interno entre o conteúdo e a borda.*/
+    
+}
+.container {
+    background-color: white;
+    border-radius: 8px;
+    width: 50%; /*.container terá 50% da largura disponível do <body>*/
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;    
+    padding: 60px; /*cria espaço dentro do container, entre a borda da caixa e o conteúdo. */
+
+}
+#botoes {
+    margin-top: 40px;
+}
