@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternar Classes</title>
+    <style>
+        .inativo {
+            width: 300px;
+            padding: 20px;
+            background-color: lightgray;
+            border: 2px solid rgb(234, 25, 25);
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        .ativo {
+            width: 300px;
+            padding: 20px;
+            background-color: lightgreen;
+            border: 2px solid green;
+            color: darkgreen;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="meuDiv" class="inativo">Clique no botão para alterar a classe.</div>
+    <button id="botaoAlternar">Alternar Classe</button>
+
+    <script>
+        document.getElementById("botaoAlternar").addEventListener("click", function() {
+            let elemento = document.getElementById("meuDiv");
+            elemento.classList.toggle("ativo");
+            
+            // Se a classe "ativo" foi adicionada, remove "inativo" se existir
+            // Mas como o toggle só alterna uma classe, vamos garantir que apenas 
+            // uma esteja ativa
+            if (elemento.classList.contains("ativo")) {//Verificar estado de um elemento (se está ativo/inativo)
+                elemento.classList.remove("inativo");
+            } else {
+                elemento.classList.add("inativo");
+            }
+        });
+    </script>
+</body>
+</html>
