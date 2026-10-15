@@ -5,3 +5,5 @@ Criar um projeto Node/npm -> npm -y init
 Instala o Bootstrap -> npm install bootstrap
 Extensão do VS Code -> Bootstrap IntelliSense 
 Instala o React com Bootstrap -> npm install react-bootstrap
+Instala o Firebase -> npm install firebase
+Instala o React Router DOM para gerenciamento de rotas -> npm install react-router-dom
