@@ -1,5 +1,6 @@
 import './App.css'
 import Register from './pages/register'
+import Login from './pages/login';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 //import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 //BrowserRouter é o componente que gerencia a navegação da aplicação.
@@ -13,6 +14,8 @@ function App() {
     <BrowserRouter>
       <Routes>
           <Route path="/register" element={<Register/>}/> 
+           <Route path="/login" element={<Login />}></Route>
+
        </Routes>
     </BrowserRouter>
     </>
