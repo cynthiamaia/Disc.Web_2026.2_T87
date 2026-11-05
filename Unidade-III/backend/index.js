@@ -40,6 +40,79 @@ app.post("/posts", async (req, res) => {
     });
   }
 });
+app.put("/put/:id", async (req, res) => {
+  try {
+
+    const { id } = req.params;
+
+    const { title, content, author } = req.body;
+
+    await db.execute(
+      "UPDATE autores SET title = ?, content = ?, author = ? WHERE id = ?",
+      [title, content, author, id]
+    );
+
+    res.status(200).json({
+      message: "put atualizado com sucesso"
+    });
+
+  } catch (err) {
+
+    console.error(err);
+
+    res.status(500).json({
+      error: "Erro interno do servidor"
+    });
+
+  }
+});
+app.delete("/delete/:id", async (req, res) => {
+
+  try {
+
+    const { id } = req.params;
+
+    await db.execute(
+      "DELETE FROM autores WHERE id = ?",
+      [id]
+    );
+
+    res.status(200).json({
+      message: "Post deletado com sucesso"
+    });
+
+  } catch (err) {
+
+    console.error(err);
+
+    res.status(500).json({
+      error: "Erro interno do servidor"
+    });
+
+  }
+
+});
+app.get("/buscar", async (req, res) => {
+
+  try {
+
+    const [rows] = await db.execute(//rows é o resultado das linhas retornadas pela consulta SQL.
+      "SELECT * FROM autores"
+    );
+
+    res.json(rows);
+
+  } catch (err) {
+
+    console.log(err);
+
+    res.status(500).json({
+      erro: "Erro no servidor"
+    });
+
+  }
+
+});
 const PORT = 4000;
 //Escolhem a porta e iniciam o servidor.
 app.listen(PORT, () => {//Faz o Express começar a escutar as requisições que chegam à porta 4000.
