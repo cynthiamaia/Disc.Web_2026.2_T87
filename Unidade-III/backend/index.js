@@ -1,5 +1,7 @@
 import express from "express"; //É uma biblioteca do Node.js que facilita a criação de servidores e APIs.
 import mysql from "mysql2/promise";
+import cors from "cors";
+
 //Cria a aplicação do backend.
 const app = express();
 const db = await mysql.createConnection({//criar conexão com o banco MySQ
@@ -9,6 +11,7 @@ const db = await mysql.createConnection({//criar conexão com o banco MySQ
   database: "Aula_Web",
 });
 app.use(express.json());//Prepara o Express para interpretar corpos de requisições JSON.
+app.use(cors());
 
 app.get("/", (req, res) => {//Define o que responder quando alguém acessar a rota inicial.
   res.send("API com MySQL rodando!");
